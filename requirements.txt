@@ -10,7 +10,8 @@ webdriver-manager==4.0.1
 
 # API-тестирование
 requests==2.31.0
-pytest-requests==0.3.0  # Обновленная версия
+pytest-requests==0.3.0
+trafaret==2.1.0  # Фиксация версии с поддержкой StrBool
 
 # Дополнительные утилиты
 python-dotenv==1.0.0
