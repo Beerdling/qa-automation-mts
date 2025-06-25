@@ -1,31 +1,23 @@
-name: Python Tests
-
+name: Run Tests
 on: [push]
 
 jobs:
   test:
     runs-on: ubuntu-latest
-    
     steps:
-    - uses: actions/checkout@v2
-    
+    - uses: actions/checkout@v4
     - name: Set up Python
-      uses: actions/setup-python@v2
+      uses: actions/setup-python@v4
       with:
-        python-version: '3.9'
-    
+        python-version: '3.11'
     - name: Install dependencies
       run: |
-        python -m pip install --upgrade pip
-        pip install pytest requests selenium
-        
-    - name: Run API tests
-      run: |
-        pytest test_api.py -v
-      
-    - name: Run UI tests
-      run: |
-        wget https://chromedriver.storage.googleapis.com/91.0.4472.101/chromedriver_linux64.zip
-        unzip chromedriver_linux64.zip
-        export PATH=$PATH:$PWD
-        pytest test_ui.py -v
+        pip install -r requirements.txt
+        sudo apt-get install chromium-driver
+    - name: Run tests
+      run: pytest tests/ --alluredir=reports
+    - name: Upload Allure report
+      uses: actions/upload-artifact@v3
+      with:
+        name: allure-report
+        path: reports
