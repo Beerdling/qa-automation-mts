@@ -1,20 +1,20 @@
 # Основные пакеты для тестирования
-pytest==8.1.1               # Основной фреймворк для тестов
-pytest-xdist==3.3.1         # Параллельный запуск тестов
-pytest-html==4.1.1          # Генерация HTML-отчетов
-allure-pytest==2.13.2       # Интеграция с Allure Report
+pytest==8.1.1
+pytest-xdist==3.3.1
+pytest-html==4.1.1
+allure-pytest==2.13.2
 
 # Веб-автоматизация
-selenium==4.15.2            # Основной пакет для браузерной автоматизации
-webdriver-manager==4.0.1    # Управление драйверами браузеров
+selenium==4.15.2
+webdriver-manager==4.0.1
 
 # API-тестирование
-requests==2.31.0            # Для HTTP-запросов
-pytest-requests==0.2.0      # Интеграция requests с pytest
+requests==2.31.0
+pytest-requests==0.3.0  # Обновленная версия
 
 # Дополнительные утилиты
-python-dotenv==1.0.0        # Работа с .env файлами
-faker==19.3.0               # Генерация тестовых данных
+python-dotenv==1.0.0
+faker==19.3.0
 
-# Логирование и отчетность
-allure-python-commons==2.13.2  # Генерация данных для Allure
+# Логирование
+allure-python-commons==2.13.2
