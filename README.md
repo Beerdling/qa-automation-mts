@@ -22,3 +22,14 @@
 ├── utils/ # Вспомогательные утилиты
 ├── requirements.txt # Зависимости
 └── README.md
+
+## ⚙️ Установка и запуск
+```bash
+# 1. Клонирование репозитория
+git clone https://github.com/Beerdling/qa-automation-mts.git
+
+# 2. Установка зависимостей
+pip install -r requirements.txt
+
+# 3. Запуск тестов
+pytest tests/ --alluredir=reports
